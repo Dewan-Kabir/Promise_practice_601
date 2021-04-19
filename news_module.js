@@ -42,7 +42,7 @@ export function findByAuthor(){
 
 var resp_json = news;
 
-console.log(resp_json.news[0].author);
+console.log(resp_json.author[0]);
 
     var news_content_html = document.getElementById('news_content');
 var content_table = document.getElementById('my_table');

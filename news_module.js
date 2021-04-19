@@ -80,6 +80,8 @@ let results =[];
            news_content_html.innerHTML += resp_json.news[i].story;
            */
            console.log(results);
+           news_content_html.innerHTML = results;
+
         }else{
             alert('There is no news for that author');
         }

@@ -44,6 +44,16 @@ var resp_json = JSON.stringify(news);
 
 console.log(resp_json[0]);
 
+var resp_json_par = JSON.parse(resp_json);
+
+console.log(resp_json_par);
+
+
+/** 
+console.log(resp_json[0]);
+
+**/
+
     var news_content_html = document.getElementById('news_content');
 var content_table = document.getElementById('my_table');
 

@@ -51,6 +51,7 @@ export function findByAuthor(targetAuthor){
         if(targetAuthor === news.author){
            results.push(news.story) ;
            news_content_html.innerHTML = results;
+           console.log(results);
         }else{
             alert('There is no news for that author');
         }

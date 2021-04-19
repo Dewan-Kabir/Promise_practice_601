@@ -34,12 +34,15 @@ const news = [
 
 ];
 
-export function findByAuthor(targetAuthor){
+var news_content_html = document.getElementById('news_content');
+var content_table = document.getElementById('my_table');
+
+export function findByAuthor(){
 
     targetAuthor = toString(document.getElementById('author_input')).value;
 
 
-    var news_content_html = document.getElementById('news_content');
+    
 
     let results =[];
 
@@ -60,3 +63,5 @@ export function findByAuthor(targetAuthor){
 
     return results;
 }
+
+findByAuthor();

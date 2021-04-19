@@ -50,7 +50,7 @@ export function findByAuthor(targetAuthor){
     for ( var i = 0 ; i < news.length ; i ++){
         if(targetAuthor === news[i].author){
            results.push(news.story) ;
-           news_content_html.innerHTML = results;
+           news_content_html.innerHTML += news[i].story;
            console.log(results);
         }else{
             alert('There is no news for that author');

@@ -40,7 +40,7 @@ export function findByAuthor(){
 
 
 
-
+console.log(news[0].author);
 
     var news_content_html = document.getElementById('news_content');
 var content_table = document.getElementById('my_table');
@@ -54,6 +54,7 @@ var content_table = document.getElementById('my_table');
 
     if (targetAuthor === null){
         return results;
+        console.log(results);
     }
 
     for ( var i = 0 ; i < news.length ; i ++){

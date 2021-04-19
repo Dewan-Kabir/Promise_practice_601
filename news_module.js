@@ -38,7 +38,7 @@ export function findByAuthor(){
     
     ];
 
-
+var resp_json = news.json();
 
 console.log(news[0].author);
 

@@ -40,7 +40,7 @@ export function findByAuthor(){
     
     ];
 
-var resp_json = news;
+var resp_json = JSON.stringify(news);
 
 console.log(resp_json.author[0]);
 

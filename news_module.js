@@ -36,7 +36,7 @@ const news = [
 
 export function findByAuthor(targetAuthor){
 
-    targetAuthor = document.getElementById('author_input').value;
+    targetAuthor = toString(document.getElementById('author_input')).value;
 
 
     var news_content_html = document.getElementById('news_content');
@@ -48,7 +48,7 @@ export function findByAuthor(targetAuthor){
     }
 
     for ( var i = 0 ; i < news.length ; i ++){
-        if(targetAuthor === news.author){
+        if(targetAuthor === news[i].author){
            results.push(news.story) ;
            news_content_html.innerHTML = results;
            console.log(results);

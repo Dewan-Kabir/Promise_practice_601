@@ -58,7 +58,7 @@ console.log(resp_json[0]);
 
 var news_content_html = document.getElementById('news_content');
 var content_table = document.getElementById('my_table');
-var targetAuthor = toString(document.getElementById('author_input')).value;
+var targetAuthor = toString(document.getElementById('author_input').value);
 console.log(targetAuthor);
 
 

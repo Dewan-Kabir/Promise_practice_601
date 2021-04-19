@@ -74,8 +74,8 @@ let results =[];
     console.log(results);
 
     for ( var i = 0 ; i < resp_json_par.length ; i ++){
-        if(targetAuthor === resp_json_par.author){
-           results.push(resp_json_par.story) ;
+        if(targetAuthor === resp_json_par[i].author){
+           results.push(resp_json_par[i].story) ;
           /** 
            news_content_html.innerHTML += resp_json.news[i].story;
            */

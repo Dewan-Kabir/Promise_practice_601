@@ -40,7 +40,7 @@ export function findByAuthor(){
 
 var resp_json = news.json();
 
-console.log(news[0].author);
+console.log(resp_json.news[0].author);
 
     var news_content_html = document.getElementById('news_content');
 var content_table = document.getElementById('my_table');
@@ -57,10 +57,10 @@ var content_table = document.getElementById('my_table');
         console.log(results);
     }
 
-    for ( var i = 0 ; i < news.length ; i ++){
-        if(targetAuthor === news[i].author){
-           results.push(news.story) ;
-           news_content_html.innerHTML += news[i].story;
+    for ( var i = 0 ; i < resp_json.news.length ; i ++){
+        if(targetAuthor === resp_json.news[i].author){
+           results.push(resp_json.news.story) ;
+           news_content_html.innerHTML += resp_json.news[i].story;
            console.log(results);
         }else{
             alert('There is no news for that author');

@@ -48,6 +48,8 @@ var resp_json_par = JSON.parse(resp_json);
 
 console.log(resp_json_par);
 
+console.log(resp_json_par[0].author);
+
 
 /** 
 console.log(resp_json[0]);

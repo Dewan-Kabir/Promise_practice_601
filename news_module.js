@@ -56,25 +56,29 @@ console.log(resp_json[0]);
 
 **/
 
-    var news_content_html = document.getElementById('news_content');
+var news_content_html = document.getElementById('news_content');
 var content_table = document.getElementById('my_table');
-
-    targetAuthor = toString(document.getElementById('author_input')).value;
+var targetAuthor = toString(document.getElementById('author_input')).value;
+console.log(targetAuthor);
 
 
     
 
-    let results =[];
+let results =[];
 
     if (targetAuthor === null){
         return results;
-        console.log(results);
+        
     }
 
-    for ( var i = 0 ; i < resp_json.news.length ; i ++){
-        if(targetAuthor === resp_json.news[i].author){
-           results.push(resp_json.news.story) ;
+    console.log(results);
+
+    for ( var i = 0 ; i < resp_json_par.length ; i ++){
+        if(targetAuthor === resp_json_par.author){
+           results.push(resp_json_par.story) ;
+          /** 
            news_content_html.innerHTML += resp_json.news[i].story;
+           */
            console.log(results);
         }else{
             alert('There is no news for that author');

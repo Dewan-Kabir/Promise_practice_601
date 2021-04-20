@@ -148,8 +148,8 @@ export function findByKeyword(){
         
 
         
-
-
+for (var k = 0 ; k < resp_json_par.length; k ++){
+            
         for ( var i = 0 ; i < resp_json_par.keyword.length ; i ++){
             var match_keyword = resp_json_par.keyword[i];
             for (var j = 0 ; j< match_keyword.length ; j ++){
@@ -163,6 +163,7 @@ export function findByKeyword(){
                 }
             }
         }
+    }
 
         return results;
     }

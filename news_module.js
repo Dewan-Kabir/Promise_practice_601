@@ -99,5 +99,75 @@ let results =[];
 
 findByAuthor();
 
+/********************************************************************************************* */
+
+export function findByKeyword(){
+
+
+
+    
+
+    var resp_json = JSON.stringify(news);
+    
+    console.log(resp_json[0]);
+    
+    var resp_json_par = JSON.parse(resp_json);
+    
+    console.log(resp_json_par);
+    
+    console.log(resp_json_par[0].author);
+    
+    console.log(resp_json_par[0].keyword[1]);
+    
+    
+    /** 
+    console.log(resp_json[0]);
+    
+    **/
+    
+    var news_content_html = document.getElementById('news_content');
+    var content_table = document.getElementById('my_table');
+    var targetAuthor = (document.getElementById('author_input').value).toString();
+    var targetKeyword = (document.getElementById('keyword_input').value).toString();
+    console.log(targetKeyword);
+    
+    
+        
+    
+    let results =[];
+    
+        if (targetKeyword === null){
+            return results;
+            
+        }
+    
+        console.log(results);
+    
+
+        
+        
+
+        
+
+
+        for ( var i = 0 ; i < resp_json_par.keyword.length ; i ++){
+            var match_keyword = resp_json_par.keyword[i];
+            for (var j = 0 ; j< match_keyword.length ; j ++){
+                if (targetKeyword === match_keyword){
+                    results.push(match_keyword);
+                    console.log(results);
+                    news_content_html.innerHTML = results;
+
+                }else{
+                    alert('There is no news for that author');
+                }
+            }
+        }
+
+        return results;
+    }
+
+    findByKeyword();
+
 
 

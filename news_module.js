@@ -157,7 +157,7 @@ for (var k = 0 ; k < resp_json_par.length; k ++){
                 if (targetKeyword === match_keyword){
                     results.push(targetKeyword);
                     console.log(results);
-                    news_content_html.innerHTML = results;
+                    news_content_html.innerHTML = test_news.story;
 
                 }else{
                     alert('There is no news for that author');

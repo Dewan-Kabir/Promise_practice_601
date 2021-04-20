@@ -18,7 +18,9 @@ export function findByAuthor(){
     
             released: "2020-01-17 12:01:28 AM EST",
     
-            story: "This is a really interesting story.  More to follow.."
+            story: "This is a really interesting story.  More to follow..",
+
+            keyword: ["Trump"  , "Queen of Yorkshire"]
     
         },
     
@@ -34,7 +36,9 @@ export function findByAuthor(){
     
             released: "2019-11-17 8:21:01 PM EST",
     
-            story: "Makes make hope that a dog can become President.  Hell, Trump can do it..."
+            story: "Makes make hope that a dog can become President.  Hell, Trump can do it...",
+
+            keyword: ["Dog" , "crime" , "fluffy"]
     
         }
     
@@ -49,6 +53,8 @@ var resp_json_par = JSON.parse(resp_json);
 console.log(resp_json_par);
 
 console.log(resp_json_par[0].author);
+
+console.log(resp_json_par[0].keyword[1]);
 
 
 /** 

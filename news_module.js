@@ -56,7 +56,7 @@ console.log(resp_json_par[0].author);
 
 console.log(resp_json_par[0].keyword[1]);
 
-console.log(substr(resp_json_par[0].released));
+console.log(substr((resp_json_par[0].released).toString));
 
 
 /** 

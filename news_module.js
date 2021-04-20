@@ -58,7 +58,7 @@ console.log(resp_json_par[0].keyword[1]);
 
 var str = (resp_json_par[0].released).toString();
 
-console.log(str.substring(1 ,10));
+console.log(str.substring(0 ,10));
 
 
 /** 

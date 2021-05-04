@@ -300,7 +300,7 @@ export function findBydate(){
     var resp_json_par = JSON.parse(resp_json);
      var body_tag = document.getElementById('body_html');
 
-    var news_content_html = document.getElementById("todays_news");
+    var news_content_html = document.getElementById("news_content");
 
     var today = new Date();
 
@@ -311,6 +311,8 @@ export function findBydate(){
       "-" +
       today.getDate()
     ).toString();
+
+    console.log("This is the which we are getting " + date);
 
     let results =[];
     

@@ -242,6 +242,8 @@ export function findBydate(){
     var content_table = document.getElementById('my_table');
     var targetAuthor = (document.getElementById('author_input').value).toString();
     var targetKeyword = (document.getElementById('keyword_input').value).toString();
+    var targetDate = (document.getElementById('date_input').value).toString();
+    console.log(targetDate);
     console.log(targetKeyword);
     
     
@@ -249,7 +251,7 @@ export function findBydate(){
     
     let results =[];
     
-        if (targetKeyword === null){
+        if (targetDate === null){
             return results;
             
         }
@@ -264,11 +266,11 @@ export function findBydate(){
 for (var k = 0 ; k < resp_json_par.length; k ++){
             var test_news = resp_json_par[k];
         for ( var i = 0 ; i < test_news.keyword.length ; i ++){
-             var match_keyword = test_news.keyword[i];
+             var match_date = (test_news.released[i]).slice(0,11);
 
         /**  for (var j = 0 ; j< match_keyword.length ; j ++){ **/ /** Need to add the ending } */
-                if (targetKeyword === match_keyword){
-                    results.push(targetKeyword);
+                if (targetDate === match_date){
+                    results.push(targetDate);
                     console.log(results);
                     news_content_html.innerHTML = test_news.story;
 
@@ -282,5 +284,5 @@ for (var k = 0 ; k < resp_json_par.length; k ++){
         return results;
     }
 
-    findByKeyword();
+    findBydate();
 

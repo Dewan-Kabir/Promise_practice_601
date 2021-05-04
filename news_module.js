@@ -132,7 +132,7 @@ let results =[];
             `;
 
         }else{
-            alert('There is no news for that author, Please Tap OK , to check again');
+            console.log('There is no news for that author, Please Tap OK , to check again');
         }
 
     }
@@ -200,7 +200,7 @@ for (var k = 0 ; k < resp_json_par.length; k ++){
             `;
 
                 }else{
-                    alert('There is no news for that keyword , Please Tap OK , to check again');
+                    console.log('There is no news for that keyword , Please Tap OK , to check again');
                 }
             
         }
@@ -330,7 +330,7 @@ export function findBydate(){
                `;
     
             }else{
-                alert('There is no news for that date which you have entered')
+                console.log('There is no news for that date which you have entered')
                 console.log((resp_json_par[0].released).substring(0,11));
             }
     

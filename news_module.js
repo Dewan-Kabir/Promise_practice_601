@@ -310,7 +310,7 @@ export function findBydate(){
        
         var today = new Date();
 
-        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var date = (today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate()).toString();
 
 
         for ( var i = 0 ; i < resp_json_par.length ; i ++){
@@ -325,7 +325,12 @@ export function findBydate(){
                 var target_date_string = targetDate.toString();
                 console.log(match_date_string);
                 console.log(target_date_string); **/
-            if(date = '2021-05-04'){
+
+                var match_date = resp_json_par[i].released;
+                console.log(match_date);
+                var match_date_value = match_date.substring(0,10);
+                var match_date_string = match_date_value.toString();
+            if(date === match_date_string){
                
               /** 
                news_content_html.innerHTML += resp_json.news[i].story;
@@ -334,11 +339,11 @@ export function findBydate(){
                news_content_html.innerHTML = `
                <div>
                <h4>This is the news for today</h4>
-               <p>The Tile of the story : ${resp_json_par[3].caption}</p> <br>
-               <p>The Tile of the story : ${resp_json_par[3].source}</p> <br>
-               <p>The Tile of the story : ${resp_json_par[3].author}</p> <br>
-                <p>The Tile of the story : ${resp_json_par[3].released}</p> <br>
-               <p>The Tile of the story : ${resp_json_par[3].story}</p>
+               <p>The Tile of the story : ${resp_json_par[i].caption}</p> <br>
+               <p>The Tile of the story : ${resp_json_par[i].source}</p> <br>
+               <p>The Tile of the story : ${resp_json_par[i].author}</p> <br>
+                <p>The Tile of the story : ${resp_json_par[i].released}</p> <br>
+               <p>The Tile of the story : ${resp_json_par[i].story}</p>
                `;
     
             }else{

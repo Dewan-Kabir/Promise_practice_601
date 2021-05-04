@@ -285,25 +285,7 @@ export function findBydate(){
 
 
 
-        for (var j = 0 ; j < resp_json_par.length; j ++){
-            var test_news = resp_json_par[j];
-        for ( var i = 0 ; i < test_news.keyword.length ; i ++){
-             var match_date = test_news.released;
-                var match_date_value = match_date.slice(0,11);
-                console.log(match_date_value);
-        /**  for (var j = 0 ; j< match_keyword.length ; j ++){ **/ /** Need to add the ending } */
-                if (targetDate === match_date_value){
-                    results.push(resp_json_par[j].story) ;
-                    //results.push(targetDate);
-                    console.log(results);
-                    news_content_html.innerHTML = test_news.story;
-
-                }else{
-                    alert('There is no news for that date');
-                }
-            
-        }
-    }
+      
         
 
         

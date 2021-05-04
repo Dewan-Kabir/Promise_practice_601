@@ -300,6 +300,13 @@ export function findBydate(){
 
    export function myPageLoad(){
 
+    var resp_json = JSON.stringify(news);
+    
+    console.log(resp_json[0]);
+    
+    var resp_json_par = JSON.parse(resp_json);
+    
+
        
         var today = new Date();
 

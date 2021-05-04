@@ -339,11 +339,11 @@ export function findBydate(){
                news_content_html.innerHTML = `
                <div>
                <h4>This is the news for today</h4>
-               <p>The Tile of the story : ${resp_json_par[i].caption}</p> <br>
-               <p>The Tile of the story : ${resp_json_par[i].source}</p> <br>
-               <p>The Tile of the story : ${resp_json_par[i].author}</p> <br>
-                <p>The Tile of the story : ${resp_json_par[i].released}</p> <br>
-               <p>The Tile of the story : ${resp_json_par[i].story}</p>
+               <p>The Tile of the story : ${resp_json_par[3].caption}</p> <br>
+               <p>The Tile of the story : ${resp_json_par[3].source}</p> <br>
+               <p>The Tile of the story : ${resp_json_par[3].author}</p> <br>
+                <p>The Tile of the story : ${resp_json_par[3].released}</p> <br>
+               <p>The Tile of the story : ${resp_json_par[3].story}</p>
                `;
     
             }else{

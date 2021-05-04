@@ -1,6 +1,9 @@
-import {findByAuthor, findByKeyword , findBydate ,} from './news_module.js';
+import {findByAuthor, findByKeyword , findBydate , myPageLoad} from './news_module.js';
 
 
+document.getElementById('news_content').onload = function() {
+    myPageLoad()
+};
 
 document.getElementById('button_get_news').addEventListener('click', findByAuthor);
 

@@ -259,29 +259,36 @@ export function findBydate(){
         console.log(results);
     
 
-        
-        
+        //targetDate === match_date_value
 
-        
-for (var j = 0 ; j < resp_json_par.length; j ++){
-            var test_news = resp_json_par[j];
-        for ( var i = 0 ; i < test_news.keyword.length ; i ++){
-             var match_date = test_news.released;
+        for ( var i = 0 ; i < resp_json_par.length ; i ++){
+            var match_date = test_news.released;
                 var match_date_value = match_date.slice(0,11);
                 console.log(match_date_value);
-        /**  for (var j = 0 ; j< match_keyword.length ; j ++){ **/ /** Need to add the ending } */
-                if (targetDate === match_date_value){
-                    results.push(resp_json_par[j].story) ;
-                    //results.push(targetDate);
-                    console.log(results);
-                    news_content_html.innerHTML = test_news.story;
-
-                }else{
-                    alert('There is no news for that date');
-                }
-            
+            if(targetDate === match_date_value){
+               results.push(resp_json_par[i].story) ;
+              /** 
+               news_content_html.innerHTML += resp_json.news[i].story;
+               */
+               console.log(results);
+               news_content_html.innerHTML = results;
+    
+            }else{
+                alert('There is no news for that date');
+            }
+    
         }
-    }
+
+
+
+
+
+
+        
+        
+
+        
+
 
         return results;
     }

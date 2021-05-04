@@ -298,7 +298,7 @@ export function findBydate(){
 
     /*************************************************************************** */
 
-    function myPageLoad(){
+   export function myPageLoad(){
 
        
         var today = new Date();

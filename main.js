@@ -1,7 +1,7 @@
 import {findByAuthor, findByKeyword , findBydate , myPageLoad} from './news_module.js';
 
 
-document.getElementById('body_html').onload = function() {
+document.getElementById('todays_news').onload = function() {
     myPageLoad()
 };
 

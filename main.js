@@ -1,4 +1,4 @@
-import {findByAuthor, findByKeyword , findBydate ,myPageLoad} from './news_module.js';
+import {findByAuthor, findByKeyword , findBydate ,} from './news_module.js';
 
 
 

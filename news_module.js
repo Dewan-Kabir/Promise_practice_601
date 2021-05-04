@@ -317,9 +317,9 @@ export function findBydate(){
       mm = "0" + mm;
     }
     
-    today = yyyy + "-" + mm + "-" + dd;
+    var today = yyyy + "-" + mm + "-" + dd;
 
-    date = today.toString();
+    var date = today.toString();
     console.log(today);
 
     console.log("This is the news we are getting for this date:  " + date);

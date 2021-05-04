@@ -277,7 +277,7 @@ export function findBydate(){
             `;
     
             }else{
-                alert('There is no news for that date which you have entered , Please Tap OK , to check again')
+                console.log('There is no news for that date which you have entered , Please Tap OK , to check again')
                 console.log((resp_json_par[0].released).substring(0,11));
             }
     

@@ -267,7 +267,7 @@ export function findBydate(){
                 var match_date_value = match_date.slice(0,11);
                 console.log(match_date_value);
 **/
-            if(targetDate === (((resp_json_par[i].released).toString()).slice(0,11))){
+            if(targetDate === ((((resp_json_par[i].released).toString()).slice(0,11)).toString())){
                results.push(resp_json_par[i].story) ;
               /** 
                news_content_html.innerHTML += resp_json.news[i].story;

@@ -34,6 +34,42 @@ var news = [
 
         keyword: ["Dog" , "crime" , "fluffy"]
 
+    },
+
+    {
+
+        caption: "The Avengers have time travelled to the past",
+
+        source: "The Daily Buggle",
+
+        url: "https://marvelcinematicuniverse.fandom.com/wiki/Avengers",
+
+        author: "Loki",
+
+        released: "2017-11-17 8:21:01 PM EST",
+
+        story: "Loki took the tassaract and travelled to another dimension  Hell, The time authority agency captured him ...",
+
+        keyword: ["Loki" , "OdinSon" , "Avengers"]
+
+    },
+
+    {
+
+        caption: "The new Batman movie will star Robert Pattisnon",
+
+        source: "The Daily Planet",
+
+        url: "https://dc.fandom.com/wiki/DC_Comics_Database",
+
+        author: "Louis Lane",
+
+        released: "2016-11-17 8:21:01 PM EST",
+
+        story: "now comes another reboot of the most famous Batman franchise, Christian Bale now stars as ...",
+
+        keyword: ["Dog" , "crime" , "fluffy"]
+
     }
 
 ];

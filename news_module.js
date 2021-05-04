@@ -268,6 +268,7 @@ for (var j = 0 ; j < resp_json_par.length; j ++){
         for ( var i = 0 ; i < test_news.keyword.length ; i ++){
              var match_date = test_news.released;
                 var match_date_value = match_date.slice(0,11);
+                console.log(match_date_value);
         /**  for (var j = 0 ; j< match_keyword.length ; j ++){ **/ /** Need to add the ending } */
                 if (targetDate === match_date_value){
                     results.push(targetDate);

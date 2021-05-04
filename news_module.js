@@ -242,7 +242,7 @@ export function findBydate(){
     var content_table = document.getElementById('my_table');
     var targetAuthor = (document.getElementById('author_input').value).toString();
     var targetKeyword = (document.getElementById('keyword_input').value).toString();
-    var targetDate = (document.getElementById('date_input').value).toString();
+    var targetDate = document.getElementById('date_input').value;
     console.log(targetDate);
     console.log(targetKeyword);
     

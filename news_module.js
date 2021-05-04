@@ -267,7 +267,7 @@ export function findBydate(){
                 var match_date_value = match_date.slice(0,11);
                 console.log(match_date_value);
 **/
-            if(targetDate === ((resp_json_par[u].released).slice(0,11))){
+            if(targetDate === (((resp_json_par[u].released).toString()).slice(0,11))){
                results.push(resp_json_par[u].story) ;
               /** 
                news_content_html.innerHTML += resp_json.news[i].story;
@@ -281,15 +281,6 @@ export function findBydate(){
     
         }
 
-
-
-
-
-
-      
-        
-
-        
 
 
         return results;

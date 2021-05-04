@@ -122,19 +122,17 @@ let results =[];
            console.log(results);
            news_content_html.innerHTML = 
            `
-           <p>${results[0]}</p>
-           <p>${results[1]}</p>
-           <p>${results[2]}</p>
-           <p>${results[3]}</p>
-           <p>${results[4]}</p>
-           <p>${results[5]}</p>
+           <p>Captaion : ${results[0]}</p>
+           <p>Source: ${results[1]}</p>
+           <p> Url: ${results[2]}</p>
+           <p>Author: ${results[3]}</p>
+           <p>Released: ${results[4]}</p>
+           <p>Story: ${results[5]}</p>
            
-           
-           
-           `;
+            `;
 
         }else{
-            alert('There is no news for that author');
+            alert('There is no news for that author, Please Tap OK , to check again');
         }
 
     }
@@ -190,10 +188,19 @@ for (var k = 0 ; k < resp_json_par.length; k ++){
                     results.push(resp_json_par[i].story);
                     results.push(targetKeyword);
                     console.log(results);
-                    news_content_html.innerHTML = test_news.story;
+                    news_content_html.innerHTML = 
+                    `
+           <p>Captaion : ${results[0]}</p>
+           <p>Source: ${results[1]}</p>
+           <p> Url: ${results[2]}</p>
+           <p>Author: ${results[3]}</p>
+           <p>Released: ${results[4]}</p>
+           <p>Story: ${results[5]}</p>
+           
+            `;
 
                 }else{
-                    alert('There is no news for that keyword');
+                    alert('There is no news for that keyword , Please Tap OK , to check again');
                 }
             
         }
@@ -258,10 +265,19 @@ export function findBydate(){
                news_content_html.innerHTML += resp_json.news[i].story;
                */
                console.log(results);
-               news_content_html.innerHTML = results;
+               news_content_html.innerHTML = 
+               `
+           <p>Captaion : ${results[0]}</p>
+           <p>Source: ${results[1]}</p>
+           <p> Url: ${results[2]}</p>
+           <p>Author: ${results[3]}</p>
+           <p>Released: ${results[4]}</p>
+           <p>Story: ${results[5]}</p>
+           
+            `;
     
             }else{
-                alert('There is no news for that date which you have entered')
+                alert('There is no news for that date which you have entered , Please Tap OK , to check again')
                 console.log((resp_json_par[0].released).substring(0,11));
             }
     

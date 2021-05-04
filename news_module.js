@@ -271,7 +271,8 @@ for (var j = 0 ; j < resp_json_par.length; j ++){
                 console.log(match_date_value);
         /**  for (var j = 0 ; j< match_keyword.length ; j ++){ **/ /** Need to add the ending } */
                 if (targetDate === match_date_value){
-                    results.push(targetDate);
+                    results.push(resp_json_par[j].story) ;
+                    //results.push(targetDate);
                     console.log(results);
                     news_content_html.innerHTML = test_news.story;
 

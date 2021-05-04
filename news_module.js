@@ -304,15 +304,25 @@ export function findBydate(){
 
     var today = new Date();
 
-    var date = (
-      today.getFullYear() +
-      "-" +
-      (today.getMonth() + 1) +
-      "-" +
-      today.getDate()
-    ).toString();
+    
+    var dd = today.getDate();
 
-    console.log("This is the which we are getting " + date);
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+      dd = "0" + dd;
+    }
+
+    if (mm < 10) {
+      mm = "0" + mm;
+    }
+    
+    today = yyyy + "-" + mm + "-" + dd;
+
+    date = today.toString();
+    console.log(today);
+
+    console.log("This is the news we are getting for this date:  " + date);
 
     let results =[];
     

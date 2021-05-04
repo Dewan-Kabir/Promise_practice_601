@@ -306,7 +306,7 @@ export function findBydate(){
     
     var resp_json_par = JSON.parse(resp_json);
     
-
+    var news_content_html = document.getElementById('news_content');
        
         var today = new Date();
 

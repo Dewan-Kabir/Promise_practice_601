@@ -66,7 +66,7 @@ var news = [
 
         released: "2021-05-04 8:21:01 PM EST",
 
-        story: "now comes another reboot of the most famous Batman franchise, Christian Bale now stars as ...",
+        story: "Now comes another reboot of the most famous Batman franchise, Christian Bale now stars as ...",
 
         keyword: ["Dog" , "crime" , "fluffy"]
 
@@ -110,6 +110,11 @@ let results =[];
 
     for ( var i = 0 ; i < resp_json_par.length ; i ++){
         if(targetAuthor === resp_json_par[i].author){
+           results.push(resp_json_par[i].caption) ;
+           results.push(resp_json_par[i].source) ;
+           results.push(resp_json_par[i].url) ;
+           results.push(resp_json_par[i].author) ;
+           results.push(resp_json_par[i].released) ;
            results.push(resp_json_par[i].story) ;
           /** 
            news_content_html.innerHTML += resp_json.news[i].story;
@@ -166,6 +171,12 @@ for (var k = 0 ; k < resp_json_par.length; k ++){
 
         /**  for (var j = 0 ; j< match_keyword.length ; j ++){ **/ /** Need to add the ending } */
                 if (targetKeyword === match_keyword){
+                    results.push(resp_json_par[i].caption);
+                    results.push(resp_json_par[i].source);
+                    results.push(resp_json_par[i].url);
+                    results.push(resp_json_par[i].author);
+                    results.push(resp_json_par[i].released);
+                    results.push(resp_json_par[i].story);
                     results.push(targetKeyword);
                     console.log(results);
                     news_content_html.innerHTML = test_news.story;
@@ -226,7 +237,12 @@ export function findBydate(){
                 console.log(match_date_string);
                 console.log(target_date_string);
             if(target_date_string === match_date_string){
-               results.push(resp_json_par[i].story) ;
+                results.push(resp_json_par[i].caption) ;
+                results.push(resp_json_par[i].source) ;
+                results.push(resp_json_par[i].url) ;
+                results.push(resp_json_par[i].author) ;
+                results.push(resp_json_par[i].released) ;
+                results.push(resp_json_par[i].story) ;
               /** 
                news_content_html.innerHTML += resp_json.news[i].story;
                */

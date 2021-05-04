@@ -298,6 +298,7 @@ export function findBydate(){
     console.log(resp_json[0]);
 
     var resp_json_par = JSON.parse(resp_json);
+     var body_tag = document.getElementById('body_html');
 
     var news_content_html = document.getElementById("todays_news");
 
@@ -311,6 +312,13 @@ export function findBydate(){
       today.getDate()
     ).toString();
 
+    let results =[];
+    
+        if (body_tag === ''){
+            return results;
+            
+        }
+
 
         for ( var i = 0 ; i < resp_json_par.length ; i ++){
             var match_date = resp_json_par[i].released;
@@ -318,16 +326,23 @@ export function findBydate(){
                 var match_date_value = match_date.substring(0,10);
                 var match_date_string = match_date_value.toString();
             if(date === match_date_string){
+                results.push(resp_json_par[i].caption) ;
+                results.push(resp_json_par[i].source) ;
+                results.push(resp_json_par[i].url) ;
+                results.push(resp_json_par[i].author) ;
+                results.push(resp_json_par[i].released) ;
+                results.push(resp_json_par[i].story) ;
              
-               news_content_html.innerHTML = `
-               <div>
-               <h4>This is the news for today</h4>
-               <p>The Tile of the story : ${resp_json_par[i].caption}</p> <br>
-               <p>The Tile of the story : ${resp_json_par[i].source}</p> <br>
-               <p>The Tile of the story : ${resp_json_par[i].author}</p> <br>
-                <p>The Tile of the story : ${resp_json_par[i].released}</p> <br>
-               <p>The Tile of the story : ${resp_json_par[i].story}</p>
-               `;
+                news_content_html.innerHTML = 
+                `
+            <p>Captaion : ${results[0]}</p>
+            <p>Source: ${results[1]}</p>
+            <p> Url: ${results[2]}</p>
+            <p>Author: ${results[3]}</p>
+            <p>Released: ${results[4]}</p>
+            <p>Story: ${results[5]}</p>
+            
+             `;
     
             }else{
                 console.log('There is no news for that date which you have entered')

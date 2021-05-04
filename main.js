@@ -3,9 +3,10 @@ import {findByAuthor, findByKeyword , findBydate , myPageLoad} from './news_modu
 
 
 
-window.onload = function(){
+$(document).ready( function() {
     myPageLoad();
-}
+    });
+
 
 document.getElementById('button_get_news').addEventListener('click', findByAuthor);
 

@@ -200,7 +200,7 @@ for (var k = 0 ; k < resp_json_par.length; k ++){
                     news_content_html.innerHTML = test_news.story;
 
                 }else{
-                    alert('There is no news for that author');
+                    alert('There is no news for that keyword');
                 }
             
         }
@@ -263,11 +263,11 @@ export function findBydate(){
         
 
         
-for (var k = 0 ; k < resp_json_par.length; k ++){
-            var test_news = resp_json_par[k];
+for (var j = 0 ; j < resp_json_par.length; j ++){
+            var test_news = resp_json_par[j];
         for ( var i = 0 ; i < test_news.keyword.length ; i ++){
              var match_date = (test_news.released[i]).slice(0,11);
-
+                console.log(match_date);
         /**  for (var j = 0 ; j< match_keyword.length ; j ++){ **/ /** Need to add the ending } */
                 if (targetDate === match_date){
                     results.push(targetDate);
@@ -275,7 +275,7 @@ for (var k = 0 ; k < resp_json_par.length; k ++){
                     news_content_html.innerHTML = test_news.story;
 
                 }else{
-                    alert('There is no news for that author');
+                    alert('There is no news for that date');
                 }
             
         }

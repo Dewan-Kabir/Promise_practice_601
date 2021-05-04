@@ -120,7 +120,7 @@ let results =[];
            news_content_html.innerHTML += resp_json.news[i].story;
            */
            console.log(results);
-           news_content_html.innerHTML = results
+           news_content_html.innerHTML = 
            `
            <p>${results[0]}</p>
            <p>${results[1]}</p>

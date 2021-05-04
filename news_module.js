@@ -276,7 +276,8 @@ export function findBydate(){
                news_content_html.innerHTML = results;
     
             }else{
-                alert('There is no news for that date which you have entered');
+                alert('There is no news for that date which you have entered')
+                console.log((resp_json_par[0].released).substring(0,11));
             }
     
         }

@@ -261,13 +261,14 @@ export function findBydate(){
 
         //targetDate === match_date_value
 
-        for ( var i = 0 ; i < resp_json_par.length ; i ++){
-            
-            var match_date = resp_json_par[i].released;
+        for ( var u = 0 ; u < resp_json_par.length ; u ++){
+            /** 
+            var match_date = resp_json_par[u].released;
                 var match_date_value = match_date.slice(0,11);
                 console.log(match_date_value);
-            if(targetDate === match_date_value){
-               results.push(resp_json_par[i].story) ;
+**/
+            if(targetDate === ((resp_json_par[u].released).slice(0,11))){
+               results.push(resp_json_par[u].story) ;
               /** 
                news_content_html.innerHTML += resp_json.news[i].story;
                */
@@ -275,7 +276,7 @@ export function findBydate(){
                news_content_html.innerHTML = results;
     
             }else{
-                alert('There is no news for that date');
+                alert('There is no news for that date which you have entered');
             }
     
         }

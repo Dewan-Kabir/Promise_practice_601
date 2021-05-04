@@ -1,9 +1,15 @@
 import {findByAuthor, findByKeyword , findBydate , myPageLoad} from './news_module.js';
 
 
+/** 
 document.getElementById('todays_news').onload = function() {
     myPageLoad()
 };
+**/
+
+window.onload = function(){
+    myPageLoad();
+}
 
 document.getElementById('button_get_news').addEventListener('click', findByAuthor);
 

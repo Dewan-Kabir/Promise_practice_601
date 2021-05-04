@@ -266,8 +266,14 @@ export function findBydate(){
             var match_date = resp_json_par[u].released;
                 var match_date_value = match_date.slice(0,11);
                 console.log(match_date_value);
-**/
-            if(targetDate === ((resp_json_par[i].released).substring(0,11))){
+**/             var match_date = resp_json_par[i].released;
+                console.log(match_date);
+                var match_date_value = match_date.substring(0,11);
+                var match_date_string = match_date_value.toString();
+                var target_date_string = targetDate.toString();
+                console.log(match_date_string);
+                console.log(target_date_string);
+            if(target_date_string === match_date_string){
                results.push(resp_json_par[i].story) ;
               /** 
                news_content_html.innerHTML += resp_json.news[i].story;

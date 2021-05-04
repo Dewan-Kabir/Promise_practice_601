@@ -28,7 +28,7 @@ var news = [
 
         author: "Mary Blige",
 
-        released: "2019-11-17 8:21:01 PM EST",
+        released: "2021-05-06 8:21:01 PM EST",
 
         story: "Makes make hope that a dog can become President.  Hell, Trump can do it...",
 
@@ -46,7 +46,7 @@ var news = [
 
         author: "Loki",
 
-        released: "2017-11-17 8:21:01 PM EST",
+        released: "2021-05-05 8:21:01 PM EST",
 
         story: "Loki took the tassaract and travelled to another dimension  Hell, The time authority agency captured him ...",
 
@@ -64,7 +64,7 @@ var news = [
 
         author: "Louis Lane",
 
-        released: "2016-11-17 8:21:01 PM EST",
+        released: "2021-05-04 8:21:01 PM EST",
 
         story: "now comes another reboot of the most famous Batman franchise, Christian Bale now stars as ...",
 
@@ -294,4 +294,56 @@ export function findBydate(){
     }
 
     findBydate();
+
+
+    /*************************************************************************** */
+
+    function myPageLoad(){
+
+       
+        var today = new Date();
+
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
+
+        for ( var i = 0 ; i < resp_json_par.length ; i ++){
+            /** 
+            var match_date = resp_json_par[u].released;
+                var match_date_value = match_date.slice(0,11);
+                console.log(match_date_value);
+**/             var match_date = resp_json_par[i].released;
+                console.log(match_date);
+                var match_date_value = match_date.substring(0,10);
+                var match_date_string = match_date_value.toString();
+                var target_date_string = targetDate.toString();
+                console.log(match_date_string);
+                console.log(target_date_string);
+            if(date = '2021-05-04'){
+               
+              /** 
+               news_content_html.innerHTML += resp_json.news[i].story;
+               */
+               
+               news_content_html.innerHTML = `
+               <div>
+               <h4>This is the news for today</h4>
+               <p>The Tile of the story : ${resp_json_par[3].caption}</p> <br>
+               <p>The Tile of the story : ${resp_json_par[3].source}</p> <br>
+               <p>The Tile of the story : ${resp_json_par[3].author}</p> <br>
+                <p>The Tile of the story : ${resp_json_par[3].released}</p> <br>
+               <p>The Tile of the story : ${resp_json_par[3].story}</p>
+               `;
+    
+            }else{
+                alert('There is no news for that date which you have entered')
+                console.log((resp_json_par[0].released).substring(0,11));
+            }
+    
+        }
+
+       
+
+    }
+
+    myPageLoad();
 
